@@ -67,6 +67,11 @@
     border-radius: 50%;
 }
 
+.img-shadow-black:hover {
+    box-shadow: #484848 0 0 10px 6px;
+    border-radius: 50%;
+}
+
 .nav-line {
     width: 1px;
     height: 100px;
@@ -103,4 +108,76 @@
 .nav-right-link-work:hover {
     color: #456268 !important;
     text-decoration: line-through;
+}
+
+@media only screen and (max-width: 400px) {
+    .home-list {
+        font-size: 3rem !important;
+    }
+
+    .nav-line {
+        width: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .home-list {
+        font-size: 2rem !important;
+    }
+
+    .nav-line {
+        width: 0 !important;
+    }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 1200px) {
+    .home-list {
+        font-size: 5rem !important;
+        letter-spacing: 0 !important;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 850px) {
+    .home-list {
+        font-size: 5rem !important;
+        letter-spacing: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .nav-right {
+        height: auto;
+        width: 100%;
+        top: 0;
+        flex-direction: row !important;
+    }
+
+    .nav-line {
+        width: 130px;
+        height: 1px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .nav-right-first {
+        align-items: start;
+        flex-direction: row !important;
+    }
+
+    .nav-right-item {
+        margin-bottom: 0;
+        transform: none !important;
+    }
+
+    .personal-detail {
+        margin-top: 30px;
+        justify-content: start !important;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 700px) {
+    .home-list {
+        font-size: 4rem !important;
+        letter-spacing: 0 !important;
+    }
 }

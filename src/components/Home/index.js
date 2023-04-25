@@ -19,7 +19,7 @@ const Home = () => {
             <div className='slide-overlay'></div>
             <div className="container-fluid main-layout h-100 bg-cream py-3">
                 <Stack className='h-100' justifyContent='center' direction='column'>
-                    <Stack className='w-100' justifyContent='space-evenly' direction="row" flexWrap='wrap'>
+                    <Stack className='w-100 personal-detail' justifyContent='space-evenly' direction="row" flexWrap='wrap' spacing={2}>
                         <Stack direction="column" alignItems='start' justifyContent='end' flexWrap='wrap'
                                maxWidth={360}>
                             <Stack direction="column" mb={3}>
@@ -43,7 +43,7 @@ const Home = () => {
                                 <Typography className='josefin-sans light-blue' fontSize={14} variant="h6"
                                             component="h6">
                                     Currently working as a Senior Full Stack Developer at <span className='company-name'
-                                                                                                onClick={() => window.open('https://bvminfotech.com/')}>BVM Infotech</span>.
+                                                                                                onClick={() => window.open('https://bvminfotech.com/','_blank')}>BVM Infotech</span>.
                                 </Typography>
                             </Stack>
                         </Stack>
@@ -73,7 +73,7 @@ const Home = () => {
                         </Stack>
                     </Stack>
                     <Stack direction="column" alignItems='center' className='nav-right' justifyContent='space-between'>
-                        <Stack direction="column" alignItems='center' justifyContent='center'>
+                        <Stack direction="column" alignItems='center' justifyContent='center' className='nav-right-first'>
                             <Box className='nav-right-item transform-none'>
                                 <NavLink target="_blank"  className='nav-right-link josefin-sans light-blue fw-bold'
                                          to='https://www.linkedin.com/in/vishal-gajera-3b51b0208/'>
@@ -83,7 +83,7 @@ const Home = () => {
                             <Box className='nav-right-item transform-none'>
                                 <NavLink target="_blank" to='https://github.com/Vishal10001/'
                                          className='nav-right-link josefin-sans light-blue fw-bold'>
-                                    <img className='img-shadow' src={githubIcon} alt='' />
+                                    <img className='img-shadow-black' src={githubIcon} alt='' />
                                 </NavLink>
                             </Box>
                             <Box className='nav-line bg-dark-blue'/>

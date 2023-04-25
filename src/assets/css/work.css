@@ -42,6 +42,10 @@
     -ms-transform: translate(0%, -50%)
 }
 
+.nav-with-bg {
+    background: transparent;
+}
+
 @keyframes fading {
     0% {
         opacity: 0
@@ -51,5 +55,46 @@
     }
     100% {
         opacity: 1
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
+    .work-dec {
+        position: static !important;
+    }
+
+    .work-detail {
+        order: 1;
+    }
+
+    .work-page {
+        overflow-y: scroll;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .work-dec {
+        position: static !important;
+        margin-top: 60px;
+    }
+
+    .work-detail {
+        order: 1;
+        padding-bottom: 20px;
+    }
+
+    .work-page {
+        overflow-y: scroll;
+    }
+
+    .nav-with-bg {
+        transition: background-color 1s ease-in-out;
+        background-color: #456268;
+        opacity: 0.9;
+    }
+
+    .text-dark-hover:hover {
+        color: #282c34 !important;
     }
 }

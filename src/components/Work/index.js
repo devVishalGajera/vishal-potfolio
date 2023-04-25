@@ -1,4 +1,5 @@
-import {Box, Stack, Typography} from "@mui/material";
+import {useEffect, useState} from "react";
+import {Box, Card, CardContent, Fade, Stack, Tooltip, Typography} from "@mui/material";
 import {NavLink} from "react-router-dom";
 
 import reactIcon from '../../assets/icon/react.svg';
@@ -13,17 +14,38 @@ import muiIcon from '../../assets/icon/material-ui.svg';
 import nextJsIcon from '../../assets/icon/nextjs.svg';
 import storyBookIcon from '../../assets/icon/storybook.svg';
 import typescriptIcon from '../../assets/icon/typescript.svg';
+import mongodbIcon from '../../assets/icon/mongodb.svg';
+import sonarqubeIcon from '../../assets/icon/sonarqube.svg';
+import bitbucketIcon from '../../assets/icon/bitbucket.svg';
+import githubIcon from '../../assets/icon/github.svg';
+import graphqlIcon from '../../assets/icon/graphql.svg';
+import javascriptIcon from '../../assets/icon/javascript.svg';
+import jenkinsIcon from '../../assets/icon/jenkins.svg';
+import amazonIcon from '../../assets/icon/amazon-s3.svg';
+import npmIcon from '../../assets/icon/npm.svg';
+import reduxSagaIcon from '../../assets/icon/redux-saga.svg';
+import jestIcon from '../../assets/icon/jest.svg';
+import jiraIcon from '../../assets/icon/jira.svg';
+import vsCodeIcon from '../../assets/icon/visual-studio.svg';
+import WebStormIcon from '../../assets/icon/webstorm.svg';
 
 import "../../assets/css/work.css";
-import {useEffect} from "react";
 
 const Work = () => {
     var slideIndex = 1;
+    const [background, setBackground] = useState(false);
     useEffect(() => {
         showDivs(slideIndex);
     }, []);
 
-    function plusDivs(n) {
+    const handleScroll = (e) => {
+        e.target.scrollTop > 1 ? setBackground(true) : setBackground(false);
+    }
+
+    var slideTimer;
+
+    function plusDivs(n, fromBtn) {
+        fromBtn && clearTimeout(slideTimer);
         showDivs(slideIndex += n);
     }
 
@@ -46,15 +68,80 @@ const Work = () => {
             }
             x[slideIndex - 1].style.display = "block";
         }
-        setTimeout(carousel, 70000);
+        slideTimer = setTimeout(carousel, 40000);
     }
+
+
+    const skillsList = {
+        technology: [
+            {label: 'Javascript', value: javascriptIcon, width: 30, link: 'https://www.javascript.com/'},
+            {label: 'React JS', value: reactIcon, link: 'https://react.dev/'},
+            {label: 'Node JS', value: nodeJsIcon, link: 'https://nodejs.org/'},
+            {label: 'Next JS', value: nextJsIcon, link: 'https://nextjs.org/'},
+            {label: 'Typescript', value: typescriptIcon, link: 'https://www.typescriptlang.org/'},
+            {label: 'Html', value: htmlIcon, link: 'https://html.spec.whatwg.org/'},
+            {label: 'Css', value: cssIcon, link: 'https://www.w3.org/TR/CSS/#css'},
+            {label: 'SCSS', value: scssIcon, link: 'https://sass-lang.com/'},
+            {label: 'Redux', value: reduxIcon, link: 'https://redux.js.org/'},
+            {label: 'Graphql', value: graphqlIcon, link: 'https://graphql.org/'},
+            {label: 'Redux-Saga', value: reduxSagaIcon, height: 30, width: 30, link: 'https://redux-saga.js.org/'},
+            {label: 'JEST', value: jestIcon, link: 'https://www.jest.org.in/'},
+            {label: 'Storybook', value: storyBookIcon, link: 'https://storybook.js.org/'},
+            {label: 'Bootstrap', value: bootstrapIcon, link: 'https://getbootstrap.com/'},
+            {label: 'Material UI', value: muiIcon, link: 'https://mui.com/'},
+            {label: 'ANT Design', value: antdIcon, link: 'https://ant.design/'}
+        ],
+        tools: [
+            {label: 'Github', value: githubIcon, height: 30, width: 30, link: 'https://github.com/Vishal10001/'},
+            {label: 'Bitbucket', value: bitbucketIcon, height: 30, width: 30, link: 'https://bitbucket.org/'},
+            {label: 'MongoDB', value: mongodbIcon, height: 30, width: 30, link: 'https://www.mongodb.com/'},
+            {label: 'SonarQube', value: sonarqubeIcon, link: 'https://www.sonarsource.com/products/sonarqube/'},
+            {label: 'Jenkins', value: jenkinsIcon, link: 'https://www.jenkins.io/'},
+            {label: 'Jira', value: jiraIcon, link: 'https://www.atlassian.com/software/jira'},
+            {label: 'Amazon s3 bucket', value: amazonIcon, link: 'https://aws.amazon.com/s3/'},
+            {label: 'Visual Studio Code', value: vsCodeIcon, link: 'https://code.visualstudio.com/'},
+            {label: 'WebStorm', value: WebStormIcon, link: 'https://www.jetbrains.com/webstorm/'},
+            {label: 'Npm', value: npmIcon, link: 'https://www.npmjs.com/'}
+        ]
+    };
+
+    const loadToolsTech = (type) => (
+        <>
+            {skillsList[type].map((item, index) => (
+                <Tooltip
+                    componentsProps={{
+                        tooltip: {
+                            sx: {
+                                bgcolor: '#456268',
+                                '& .MuiTooltip-arrow': {
+                                    color: '#456268',
+                                },
+                            },
+                        },
+                    }}
+                    TransitionComponent={Fade}
+                    followCursor
+                    arrow
+                    TransitionProps={{timeout: 600}}
+                    title={item?.label} placement="top"
+                >
+                    <a href={item?.link} target='_blank'>
+                        <img src={item?.value} key={index} width={item?.width} height={item?.height} alt=''/>
+                    </a>
+                </Tooltip>
+            ))}
+        </>
+    );
 
     return (
         <div className='bg-cream h-100'>
-            <div className="container-fluid slide-overlay-top-bottom bg-extra-light-blue h-100  py-3">
+            <div className="container-fluid slide-overlay-top-bottom work-page bg-extra-light-blue h-100  py-3"
+                 onScroll={handleScroll}>
                 <Stack className='h-100' justifyContent='center' direction='column'>
                     <Stack className='w-100 h-100' justifyContent='space-evenly' direction="row" flexWrap='wrap'>
-                        <Stack direction="column" alignItems='start' spacing={2} className='position-relative' justifyContent='center'>
+                        <Stack direction="column" alignItems='start' spacing={2}
+                               className='position-relative work-detail'
+                               justifyContent='center'>
                             <Box className='mySlides animate-fading project-overview p-2'>
                                 <Typography className='josefin-sans text-start pb-2 cream-text'
                                             variant="h6"
@@ -109,7 +196,7 @@ const Work = () => {
                                             component="h6">
                                     Skills were used:
                                 </Typography>
-                                <Stack alignItems='center' direction='row' spacing={1}>
+                                <Stack alignItems='center' flexWrap='wrap' direction='row' spacing={1}>
                                     <img src={reactIcon} alt=''/>
                                     <img src={reduxIcon} alt=''/>
                                     <img src={cssIcon} alt=''/>
@@ -119,7 +206,7 @@ const Work = () => {
                                     <img src={muiIcon} alt='' className='pt-2'/>
                                 </Stack>
                             </Stack>
-                            <Box className='mySlides animate-fading project-overview p-2'>
+                            <Stack className='mySlides animate-fading project-overview p-2'>
                                 <Typography className='josefin-sans text-start pb-2 cream-text'
                                             variant="h6"
                                             component="h6">
@@ -141,7 +228,7 @@ const Work = () => {
                                             component="h6">
                                     Skills were used:
                                 </Typography>
-                                <Stack alignItems='center' direction='row' spacing={1}>
+                                <Stack alignItems='center' flexWrap='wrap' direction='row' spacing={1}>
                                     <img src={reactIcon} alt=''/>
                                     <img src={nextJsIcon} alt=''/>
                                     <img src={reduxIcon} alt=''/>
@@ -151,8 +238,8 @@ const Work = () => {
                                     <img src={muiIcon} alt='' className='pt-2'/>
                                     <img src={storyBookIcon} alt=''/>
                                 </Stack>
-                            </Box>
-                            <Box className='mySlides animate-fading project-overview p-2'>
+                            </Stack>
+                            <Stack className='mySlides animate-fading project-overview p-2'>
                                 <Typography className='josefin-sans text-start text-uppercase pb-2 cream-text'
                                             variant="h6"
                                             component="h6">
@@ -172,7 +259,7 @@ const Work = () => {
                                             component="h6">
                                     Skills were used:
                                 </Typography>
-                                <Stack alignItems='center' direction='row' spacing={1}>
+                                <Stack alignItems='center' flexWrap='wrap' direction='row' spacing={1}>
                                     <img src={reactIcon} alt=''/>
                                     <img src={reduxIcon} alt=''/>
                                     <img src={cssIcon} alt=''/>
@@ -180,15 +267,15 @@ const Work = () => {
                                     <img src={bootstrapIcon} alt=''/>
                                     <img src={antdIcon} alt=''/>
                                 </Stack>
-                            </Box>
+                            </Stack>
                             <button className="left-arrow-btn bg-transparent  border-0"
-                                    onClick={() => plusDivs(-1)}>&#10094;</button>
+                                    onClick={() => plusDivs(-1, true)}>&#10094;</button>
                             <button className="right-arrow-btn bg-transparent border-0"
-                                    onClick={() => plusDivs(1)}>&#10095;</button>
+                                    onClick={() => plusDivs(1, true)}>&#10095;</button>
                         </Stack>
-                        <Stack direction="column" alignItems='start' className='w-100'
+                        <Stack direction="column" alignItems='start' justifyContent='center' className='w-100'
                                maxWidth={360}>
-                            <Box position='fixed' maxWidth={360}>
+                            <Box className='work-dec' position='fixed' maxWidth={360}>
                                 <Stack direction="column" alignItems='start' mb={3}>
                                     <Typography className='josefin-sans text-start text-uppercase pb-2 cream-text'
                                                 variant="h6"
@@ -216,18 +303,39 @@ const Work = () => {
                                                 component="h6">
                                         SKills
                                     </Typography>
-                                    <Typography className='josefin-sans text-start pb-2 cream-text' fontSize={14}
-                                                variant="h6"
-                                                component="h6">
-                                    </Typography>
+                                    <Card>
+                                        <CardContent>
+                                            <Typography className='josefin-sans text-start light-blue pb-1 fw-bold'
+                                                        fontSize={14}
+                                                        variant="h6"
+                                                        component="h6">
+                                                Technology's
+                                            </Typography>
+                                            <Stack alignItems='center' flexWrap='wrap' maxWidth={400} useFlexGap
+                                                   direction='row' spacing={2}>
+                                                {loadToolsTech('technology')}
+                                            </Stack>
+                                            <Typography className='josefin-sans text-start light-blue mt-3 pb-1 fw-bold'
+                                                        fontSize={14}
+                                                        variant="h6"
+                                                        component="h6">
+                                                Tools
+                                            </Typography>
+                                            <Stack alignItems='center' flexWrap='wrap' maxWidth={400} useFlexGap
+                                                   direction='row' spacing={1.5}>
+                                                {loadToolsTech('tools')}
+                                            </Stack>
+                                        </CardContent>
+                                    </Card>
                                 </Stack>
                             </Box>
                         </Stack>
                     </Stack>
-                    <Stack direction="column" alignItems='center' className='nav-right' justifyContent='space-between'>
+                    <Stack direction="column" alignItems='center'
+                           className={`nav-right ${background ? 'nav-with-bg' : ''}`} justifyContent='space-between'>
                         <Stack direction="column" alignItems='center' justifyContent='center'>
                             <Box className='nav-right-item'>
-                                <NavLink className='nav-right-link nav-right-link-work josefin-sans cream-text fw-bold'
+                                <NavLink className={`nav-right-link nav-right-link-work josefin-sans cream-text fw-bold ${background ? 'text-dark-hover' : ''}`}
                                          to='/'>
                                     Home
                                 </NavLink>

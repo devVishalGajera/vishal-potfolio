@@ -1,0 +1,55 @@
+@keyframes slide-down {
+    0% {
+        bottom: 100%;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.slide-overlay-top-bottom {
+    text-align: center;
+    position: relative;
+    animation: slide-down 1s 1 forwards;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.project-overview {
+    transition: 0.8s;
+    border-radius: 10px;
+    background: #456268;
+}
+
+.animate-fading {
+    animation: fading 2s forwards;
+}
+
+.left-arrow-btn {
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(-0%, -50%)
+}
+
+.right-arrow-btn {
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%)
+}
+
+@keyframes fading {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 1
+    }
+}

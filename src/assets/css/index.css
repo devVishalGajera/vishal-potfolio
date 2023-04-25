@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Dancing', 'Josefin Sans',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    /*width: 100%;*/
+    overflow: hidden !important;
+    /*background: red !important;*/
+}
+
+* {
+    font-family: 'Josefin Sans';
+}
+
+.bg-cream {
+    background: #FCF8EC !important;
+}
+
+.cream-text {
+    color: #FCF8EC;
+}
+
+::selection {
+    color: #FCF8EC;
+    background: #456268;
+}
+
+.bg-dark-blue {
+    background: #456268 !important;
+}
+
+.light-blue {
+    color: #456268;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.bg-extra-light-blue {
+    background: #79A3B1 !important;
+}
+.overflow-y-hidden{
+    overflow-y: hidden !important;
+}
+.overflow-y-scroll{
+    overflow-y: scroll;
+}
+.extra-light-blue {
+    color: #79A3B1;
+}
+
+.bg-lighter-blue {
+    background: #D0E8F2;;
+}
+
+.lighter-blue {
+    color: #D0E8F2;
+}
+
+.dancing-font {
+    font-family: 'Dancing' !important;
+}
+
+.josefin-sans {
+    font-family: 'Josefin Sans' !important;
+}
+
+#root {
+    height: 100%;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

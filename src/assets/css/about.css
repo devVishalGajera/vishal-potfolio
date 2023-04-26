@@ -1,0 +1,111 @@
+.main-div {
+    /* Set initial position to the left side of the page */
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    background: #bbd9e3;
+    /* Add transition property for smooth animation */
+    transition: left 2s ease;
+    animation: slide-left 1s 1 forwards;
+
+}
+
+.about-card {
+    animation: fading-full 4s forwards;
+}
+
+@keyframes fading-full {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .about-card-main {
+        flex-wrap: wrap;
+        /*margin-top: 60px*/
+    }
+
+    .about-card-content {
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .about-card-main {
+        flex-wrap: wrap;
+    }
+
+    .about-card-content {
+        margin-top: 20px;
+        padding-bottom: 20px !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .main-div {
+        overflow-y: scroll;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .about-card-main {
+        margin-top: 60px
+    }
+
+    .main-div {
+        overflow-y: scroll;
+    }
+
+    .nav-with-bg {
+        transition: background-color 1s ease-in-out;
+        background-color: #456268;
+        opacity: 0.9;
+    }
+
+    .text-dark-hover {
+        color: #fff;
+    }
+
+    .text-dark-hover:hover {
+        color: #8fc2d5 !important;
+    }
+}
+
+.mail-to:hover {
+    text-decoration: line-through !important;
+    color: lightslategrey !important;
+}
+
+.text-area-contact {
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.text-area-contact:hover {
+    outline-color: lightslategrey !important;
+}
+
+.text-area-contact:focus {
+    outline: 2px solid #456268;
+}

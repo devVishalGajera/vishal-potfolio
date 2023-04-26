@@ -36,3 +36,11 @@
 .transform-none {
     transform: none;
 }
+
+.fw-400 {
+    font-weight: 400 !important;
+}
+
+.letter-spacing-0 {
+    letter-spacing: 0 !important;
+}

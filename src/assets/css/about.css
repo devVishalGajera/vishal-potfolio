@@ -102,10 +102,18 @@
     border-radius: 20px;
 }
 
+.text-area-contact-error {
+    outline: 1px solid red !important;
+}
+
+.text-area-contact-error:hover {
+    outline: 1px solid red !important;
+}
+
 .text-area-contact:hover {
-    outline-color: lightslategrey !important;
+    outline: 1px solid lightslategrey !important;
 }
 
 .text-area-contact:focus {
-    outline: 2px solid #456268;
+    outline: 1px solid #456268;
 }

@@ -8,12 +8,6 @@ import "../../assets/css/home.css";
 
 const Home = () => {
 
-    useEffect(() => {
-        // let element = document.getElementsByTagName('body')[0];
-        // element.style.height = '100vh';
-        // element.style.overflow = 'hidden';
-    }, []);
-
     return (
         <div className='bg-extra-light-blue h-100'>
             <div className='slide-overlay'></div>
@@ -44,7 +38,8 @@ const Home = () => {
                                 <Typography className='josefin-sans light-blue' fontSize={14} variant="h6"
                                             component="h6">
                                     Currently working as a Senior Full Stack Developer at <span className='company-name'
-                                                                                                onClick={() => window.open('https://bvminfotech.com/', '_blank')}>BVM Infotech</span>.
+                                                                                                // onClick={() => window.open('https://bvminfotech.com/', '_blank')}
+                                >BVM Infotech</span>.
                                 </Typography>
                             </Stack>
                         </Stack>

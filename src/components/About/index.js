@@ -2,6 +2,7 @@ import {useState} from "react";
 import {Box, Button, Stack, Typography} from "@mui/material";
 import {NavLink} from "react-router-dom";
 import myCV from "../../assets/cv/Vishal gajera React.pdf";
+import myImage from "../../assets/images/myImg.png";
 import "../../assets/css/about.css";
 
 const About = () => {
@@ -17,8 +18,8 @@ const About = () => {
                    className='w-100 h-100 about-card-main'>
                 <Stack direction="row" alignItems='center' justifyContent='center'
                        className='about-card w-100'>
-                    <Box>
-                        <img className='rounded-circle' src='https://picsum.photos/300/300' alt=''/>
+                    <Box maxWidth={400} maxHeight={400}>
+                        <img className='rounded-circle h-100 w-100' src={myImage} alt=''/>
                     </Box>
                 </Stack>
                 <Stack direction="column" className='about-card-content p-2 pb-3 w-100' alignItems='start'
@@ -57,20 +58,22 @@ const About = () => {
                             My mission is to contribute in open-source sites and learn new technologies.
                         </Typography>
                         <Stack direction="row" alignItems='center' className='mt-3' justifyContent='start' gap={2}>
+                            <NavLink to='/contact-me' className='text-white text-decoration-none'>
+                                <Button sx={{
+                                    backgroundColor: '#456268', color: '#fff', '&:hover': {
+                                        backgroundColor: '#79A3B1',
+                                    },
+                                }}>
+                                    Contact ME
+                                </Button>
+                            </NavLink>
                             <Button sx={{
                                 backgroundColor: '#456268', color: '#fff', '&:hover': {
                                     backgroundColor: '#79A3B1',
                                 },
                             }}>
-                                <NavLink to='/contact-me' className='text-white text-decoration-none'> Contact
-                                    ME</NavLink>
-                            </Button>
-                            <Button sx={{
-                                backgroundColor: '#456268', color: '#fff', '&:hover': {
-                                    backgroundColor: '#79A3B1',
-                                },
-                            }}>
-                                <a className='text-decoration-none text-white' download='Vishal Gajera' href={myCV}>Download CV</a>
+                                <a className='text-decoration-none text-white' download='Vishal Gajera' href={myCV}>Download
+                                    CV</a>
                             </Button>
                         </Stack>
                     </Box>

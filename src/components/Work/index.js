@@ -143,12 +143,12 @@ const Work = () => {
                                className='position-relative work-detail'
                                justifyContent='center'>
                             <Box className='mySlides animate-fading project-overview p-2'>
-                                <Typography className='josefin-sans text-start pb-2 cream-text'
+                                <Typography className='josefin-sans text-start pb-2 light-blue'
                                             variant="h6"
                                             component="h6">
                                     Neo Benk
                                 </Typography>
-                                <Typography maxWidth={600} className='josefin-sans pb-3 cream-text text-start'
+                                <Typography maxWidth={600} className='josefin-sans pb-3 light-blue text-start'
                                             fontSize={14} variant="h6"
                                             component="h6">
                                     This project is related to Online Money Transfer. You can login with Google and
@@ -156,7 +156,7 @@ const Work = () => {
                                     can Transfer, Send and Receive Currency and as well as digital currency from other
                                     user.
                                 </Typography>
-                                <Typography maxWidth={600} className='josefin-sans pb-1 cream-text text-start'
+                                <Typography maxWidth={600} className='josefin-sans pb-1 light-blue text-start'
                                             fontSize={15} variant="h6"
                                             component="h6">
                                     Skills were used:
@@ -171,12 +171,12 @@ const Work = () => {
                                 </Stack>
                             </Box>
                             <Stack className='mySlides animate-fading project-overview p-2'>
-                                <Typography className='josefin-sans text-start pb-2 cream-text'
+                                <Typography className='josefin-sans text-start pb-2 light-blue'
                                             variant="h6"
                                             component="h6">
                                     Dietech
                                 </Typography>
-                                <Typography maxWidth={600} className='josefin-sans pb-3 cream-text text-start'
+                                <Typography maxWidth={600} className='josefin-sans pb-3 light-blue text-start'
                                             fontSize={14} variant="h6"
                                             component="h6">
                                     Dietech is a highly specialized program that was developed with the help of a
@@ -191,7 +191,7 @@ const Work = () => {
                                     meet your
                                     facility’s needs now and into the future.
                                 </Typography>
-                                <Typography maxWidth={600} className='josefin-sans pb-1 cream-text text-start'
+                                <Typography maxWidth={600} className='josefin-sans pb-1 light-blue text-start'
                                             fontSize={15} variant="h6"
                                             component="h6">
                                     Skills were used:
@@ -207,12 +207,12 @@ const Work = () => {
                                 </Stack>
                             </Stack>
                             <Stack className='mySlides animate-fading project-overview p-2'>
-                                <Typography className='josefin-sans text-start pb-2 cream-text'
+                                <Typography className='josefin-sans text-start pb-2 light-blue'
                                             variant="h6"
                                             component="h6">
                                     BearishOs
                                 </Typography>
-                                <Typography maxWidth={600} className='josefin-sans pb-3 cream-text text-start'
+                                <Typography maxWidth={600} className='josefin-sans pb-3 light-blue text-start'
                                             fontSize={14} variant="h6"
                                             component="h6">
                                     The Bearish OS connects & Unifies all your work in One Place. The Bearish OS
@@ -223,7 +223,7 @@ const Work = () => {
                                     OS. It connects most
                                     major software experiences to the Bearish.
                                 </Typography>
-                                <Typography maxWidth={600} className='josefin-sans pb-1 cream-text text-start'
+                                <Typography maxWidth={600} className='josefin-sans pb-1 light-blue text-start'
                                             fontSize={15} variant="h6"
                                             component="h6">
                                     Skills were used:
@@ -240,12 +240,12 @@ const Work = () => {
                                 </Stack>
                             </Stack>
                             <Stack className='mySlides animate-fading project-overview p-2'>
-                                <Typography className='josefin-sans text-start text-uppercase pb-2 cream-text'
+                                <Typography className='josefin-sans text-start text-uppercase pb-2 light-blue'
                                             variant="h6"
                                             component="h6">
                                     WFM (Work Force Management)
                                 </Typography>
-                                <Typography maxWidth={600} className='josefin-sans pb-3 cream-text text-start'
+                                <Typography maxWidth={600} className='josefin-sans pb-3 light-blue text-start'
                                             fontSize={14} variant="h6"
                                             component="h6">
                                     This project is about managing electricity company’s all the works. Like users
@@ -254,7 +254,7 @@ const Work = () => {
                                     manage action’s. All the user have different permission that can through they access
                                     page that permission and all the things are handled from the backend.
                                 </Typography>
-                                <Typography maxWidth={600} className='josefin-sans pb-1 cream-text text-start'
+                                <Typography maxWidth={600} className='josefin-sans pb-1 light-blue text-start'
                                             fontSize={15} variant="h6"
                                             component="h6">
                                     Skills were used:

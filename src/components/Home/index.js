@@ -1,4 +1,3 @@
-import {useEffect} from "react";
 import {Box, Stack, Typography} from "@mui/material";
 import {NavLink} from "react-router-dom";
 
